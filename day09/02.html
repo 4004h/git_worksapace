@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>쿠팡 카피</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+        a{
+            color: black;
+            text-decoration: none;
+            display: block;
+        }
+        ul
+        {
+            list-style: none;
+        }
+
+        .container
+        {
+            width: calc(980px + 100px);
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .tophead
+        {
+            width: 980px;
+            float: left;
+        }
+
+        .header
+        {
+            overflow: hidden;
+            padding-top: 10px;
+        }
+        .header h1
+        {
+            display: inline-block;
+            object-fit: cover;
+        }
+        .header h1 a
+        {
+            display: inline-block;
+        }
+
+        .header h1 img
+        {
+            padding: 10px;
+        }
+        .top
+        {
+            float: right;
+            overflow: hidden;
+        }
+        .top li
+        {
+            float: left;
+        }
+
+        .top li a
+        {
+            padding: 0px 5px;
+        }
+
+        .menus
+        {
+            display: flex;
+            justify-content: center;
+        }
+        .menu
+        {
+            width: 140px;
+            height: 50px;
+        }
+
+        .menus .menu>div
+        {
+            width: 140px;
+            height: 50px;
+            background-image: url(./Images/top_gnb.png);
+        }
+        .menus .item_1
+        {
+            background-position: 0px -0px;
+        }
+        .menus .item_2
+        {
+            background-position: 0px -50px;
+        }
+        .menus .item_3
+        {
+            background-position: 0px -100px;
+        }
+        .menus .item_4
+        {
+            background-position: 0px -150px;
+        }
+        .menus .item_5
+        {
+            background-position: 0px -200px;
+        }
+        .menus .item_6
+        {
+            background-position: 0px -250px;
+        }
+        .menus .item_7
+        {
+            background-position: 0px -300px;
+        }
+
+        .menus .activ .item_1
+        {
+            background-position: 0px -350px;
+        }
+        .menus .activ .item_2
+        {
+            background-position: 0px -400px;
+        }
+        .menus .activ .item_3
+        {
+            background-position: 0px -450px;
+        }
+        .menus .activ .item_4
+        {
+            background-position: 0px -500px;
+        }
+        .menus .activ .item_5
+        {
+            background-position: 0px -550px;
+        }
+        .menus .activ .item_6
+        {
+            background-position: 0px -600px;
+        }
+        .menus .activ .item_7
+        {
+            background-position: 0px -650px;
+        }
+
+        .submenus
+        {
+            width: calc(98px * 10);
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            margin: 0px 0px;
+        }
+        .submenu
+        {
+            width: 98px;
+            height: 80px;
+        }
+        .submenu div
+        {
+            width: 98px;
+            height: 80px;
+            background-image: url(./Images/bottom_gnb.png);
+        }
+
+        .submenus .item_1
+        {
+            background-position: 0px -0px;
+        }
+        .submenus .item_2
+        {
+            background-position: 0px -80px;
+        }
+        .submenus .item_3
+        {
+            background-position: 0px -160px;
+        }
+        .submenus .item_4
+        {
+            background-position: 0px -240px;
+        }
+        .submenus .item_5
+        {
+            background-position: 0px -320px;
+        }
+        .submenus .item_6
+        {
+            background-position: 0px -400px;
+        }
+        .submenus .item_7
+        {
+            background-position: 0px -480px;
+        }
+        .submenus .item_8
+        {
+            background-position: 0px -560px;
+        }
+        .submenus .item_9
+        {
+            background-position: 0px -640px;
+        }
+        .submenus .item_10
+        {
+            background-position: 0px -720px;
+        }
+
+
+        .submenus .activ .item_1
+        {
+            background-position: 0px -800px;
+        }
+        .submenus .activ .item_2
+        {
+            background-position: 0px -880px;
+        }
+        .submenus .activ .item_3
+        {
+            background-position: 0px -960px;
+        }
+        .submenus .activ .item_4
+        {
+            background-position: 0px -1040px;
+        }
+        .submenus .activ .item_5
+        {
+            background-position: 0px -1120px;
+        }
+        .submenus .activ .item_6
+        {
+            background-position: 0px -1200px;
+        }
+        .submenus .activ .item_7
+        {
+            background-position: 0px -1280px;
+        }
+        .submenus .activ .item_8
+        {
+            background-position: 0px -1360px;
+        }
+        .submenus .activ .item_9
+        {
+            background-position: 0px -1440px;
+        }
+        .submenus .activ .item_10
+        {
+            background-position: 0px -1520px;
+        }
+
+        .list
+        {
+            background-color: #333;
+            color: white;
+        }
+
+        .cel
+        {
+            overflow: hidden;
+        }
+        .cel>li
+        {
+            text-indent: 10px;
+            float: left;
+            width: calc(100% / 5);
+        }
+        .row
+        {
+            padding: 15px;
+
+        }
+        .row>li
+        {
+            text-indent: 0px;
+            font-weight: bold;
+            font-size: 1em;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding: 5px;
+        }
+        .row>li.cate
+        {
+            color: #12c8ff;
+            text-indent: 10px;
+        }
+
+        .sade
+        {
+            width: 100px;
+            height: 100%;
+            float: right;
+        }
+        .sadebox
+        {
+            /* margin: 10px auto; */
+            margin: 10px 0px 10px 10px;
+            width: 90px;
+            height: 160px;
+            line-height: 160px;
+            background-color: #ddd;
+            color: #aaa;
+            text-align: center;
+            font-size: 1em;
+            /* border-radius: 5px; */
+        }
+        .box
+        {
+            width: 980px;
+            height: 440px;
+            line-height: 440px;
+            background-color: #ddd;
+            color: #aaa;
+            font-size: 5em;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        #main_footer
+        {
+            margin-top: 10px;
+            height: 70px;
+            line-height: 70px;
+            background-color: #ddd;
+            float: left;
+            width: 100%;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="tophead">
+
+            <div class="header">
+                <h1>
+                    <a href="#">
+                        <img src="./Images/title.png" alt="">
+                    </a>
+                </h1>
+        
+                <ul class="top">
+                    <li>
+                        <a href="#">로그인</a>
+                    </li>
+                    <li>
+                        <a href="#">고객센터</a>
+                    </li>
+                    <li>
+                        <a href="#">회원가입</a>
+                    </li>
+                </ul>
+            </div>
+    
+            <div class="menus">
+                <div class="menu activ"> <div class=" item_1"></div> </div>
+                <div class="menu"> <div class=" item_2"></div> </div>
+                <div class="menu"> <div class=" item_3"></div> </div>
+                <div class="menu"> <div class=" item_4"></div> </div>
+                <div class="menu"> <div class=" item_5"></div> </div>
+                <div class="menu"> <div class=" item_6"></div> </div>
+                <div class="menu"> <div class=" item_7"></div> </div>
+            </div>
+    
+            <div class="submenus">
+                <div class="submenu activ"> <div class=" item_1"></div> </div>
+                <div class="submenu "> <div class=" item_2"></div> </div>
+                <div class="submenu "> <div class=" item_3"></div> </div>
+                <div class="submenu "> <div class=" item_4"></div> </div>
+                <div class="submenu "> <div class=" item_5"></div> </div>
+                <div class="submenu "> <div class=" item_6"></div> </div>
+                <div class="submenu "> <div class=" item_7"></div> </div>
+                <div class="submenu "> <div class=" item_8"></div> </div>
+                <div class="submenu "> <div class=" item_9"></div> </div>
+                <div class="submenu "> <div class=" item_10"></div> </div>
+            </div>
+    
+            <div class="list">
+                <ul class="cel">
+                    <li>
+                        <ul class="row">
+                            <li class="cate">게임용 노트북 </li>
+                            <li>아이온 게임용 노트북 </li>
+                            <li>디아블로 게임용 노트북</li>
+                            <li>블소 게임용 노트북 </li>
+                            <li class="cate">울트라북</li>
+                            <li>둘리 울트라북 노트북 가방</li>
+                            <li>솜사탕 브랜드 노트북 가방 </li>
+                            <li>보노보노 가방</li>
+                            <li>노트북 보호 용품 Node.js </li>
+                            <li>방열 보호판 안드로이드</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="row">
+                            <li>우주 방사능 보호 코팅제 </li>
+                            <li>이름 만들기 힘들어요</li>
+                            <li>자체 중력 생성 장치 초특가</li>
+                            <li>미오 베이스 장치 공간을 지배하는자 현금 할인</li>
+                            <li class="cate">이름 만들기 힘들어요</li>
+                            <li>이름 만들기 힘들어요</li>
+                            <li>이름 만들기 힘들어요</li>
+                            <li>이름 만들기 힘들어요</li>
+                            <li>이름 만들기 힘들어요</li>
+                            <li>이름 만들기 힘들어요</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="row">
+                            <li>이름 만들기 힘들어요</li>
+                            <li class="cate">이름 만들기 힘들어요</li>
+                            <li>이름 만들기 힘들어요</li>
+                            <li>이름 만들기 힘들어요</li>
+                            <li>이름 만들기 힘들어요</li>
+                            <li>이름 만들기 힘들어요</li>
+                            <li>이름 만들기 힘들어요</li>
+                            <li class="cate">이름 만들기 힘들어요</li>
+                            <li>이름 만들기 힘들어요</li>
+                            <li>이름 만들기 힘들어요</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="row">
+                            <li>이름 만들기 힘들어요</li>
+                            <li>이름 만들기 힘들어요</li>
+                            <li>이름 만들기 힘들어요</li>
+                            <li>이름 만들기 힘들어요</li>
+                            <li class="cate">이름 만들기 힘들어요</li>
+                            <li>이름 만들기 힘들어요</li>
+                            <li>이름 만들기 힘들어요</li>
+                            <li class="cate">이름 만들기 힘들어요</li>
+                            <li>이름 만들기 힘들어요</li>
+                            <li>이름 만들기 힘들어요</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="row">
+                            <li class="cate">이름 만들기 힘들어요</li>
+                            <li>이름 만들기 힘들어요</li>
+                            <li>이름 만들기 힘들어요</li>
+                            <li>이름 만들기 힘들어요</li>
+                            <li>이름 만들기 힘들어요</li>
+                            <li>이름 만들기 힘들어요</li>
+                            <li class="cate">이름 만들기 힘들어요</li>
+                            <li>이름 만들기 힘들어요</li>
+                            <li>이름 만들기 힘들어요</li>
+                            <li>이름 만들기 힘들어요</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="box">980 x 440</div>
+            <div class="box">980 x 440</div>
+        </div>
+
+        <div class="sade">
+            <div class="sadebox">100 x 100</div>
+            <div class="sadebox">100 x 100</div>
+            <div class="sadebox">100 x 100</div>
+            <div class="sadebox">100 x 100</div>
+            <div class="sadebox">100 x 100</div>
+            <div class="sadebox">100 x 100</div>
+            <div class="sadebox">100 x 100</div>
+            <div class="sadebox">100 x 100</div>
+        </div>
+        <footer id="main_footer">
+            <h1>연세IT미래교육원</h1>
+        </footer>
+
+    </div>
+
+
+    
+
+
+
+
+</body>
+</html>

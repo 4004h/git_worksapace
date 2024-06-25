@@ -1,0 +1,70 @@
+.container{
+    margin: 0 auto;
+    width: 960px;
+
+}
+.row{
+    overflow: hidden;
+}
+.span{
+    float: left;
+}
+.span-1{
+    width: calc(80px * 1);
+    background-color: red;
+}
+.span-2{
+    width: calc(80px * 2);
+    background-color: #ff8800;
+
+}
+.span-3{
+    width: calc(80px * 3);
+    background-color: #fbff00;
+
+}
+.span-4{
+    width: calc(80px * 4);
+    background-color: #3cff00;
+
+}
+.span-5{
+    width: calc(80px * 5);
+    background-color: #00ffea;
+
+}
+.span-6{
+    width: calc(80px * 6);
+    background-color: #0066ff;
+
+}
+.span-7{
+    width: calc(80px * 7);
+    background-color: #0004ff;
+
+}
+.span-8{
+    width: calc(80px * 8);
+    background-color: #6f00ff;
+
+}
+.span-9{
+    width: calc(80px * 9);
+    background-color: #ff0055;
+
+}
+.span-10{
+    width: calc(80px * 10);
+    background-color: #3cff00;
+
+}
+.span-11{
+    width: calc(80px * 11);
+    background-color: #000000;
+
+}
+.span-12{
+    width: calc(80px * 12);
+    background-color: #00ff6a;
+
+}

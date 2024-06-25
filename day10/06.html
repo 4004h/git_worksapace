@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul
+        {
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            display: block;
+        }
+        .header
+        {
+            height: 40px;
+            margin-bottom: 30px;
+        }
+        .announ .top{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .announ .top p, .top h4
+        {
+            margin: 0;
+            padding: 5px;
+        }
+        .announ .top h5
+        {
+            margin: 0;
+            padding: 5px 0px;
+            color: #28a745;
+            font-weight: bold;
+            border-bottom: 2px solid #28a745;
+        }
+        .announ ul 
+        {
+            margin: 0;
+            padding: 10px;
+        }
+        .announ ul li
+        {
+            overflow: hidden;
+        }
+        .announ ul li span
+        {
+            float: right;
+            margin-left: 20px;
+        }
+        .coll h5
+        {
+            padding: 5px 0;
+            font-weight: bold;
+        }
+        .coll p
+        {
+            margin: 5px 0;
+        }
+        .display-6
+        {
+            font-size: 0.6em;
+        }
+        .display-7
+        {
+            font-size: 1.6em;
+            font-weight: bold;
+        }
+        .display-8
+        {
+            font-size: 1em;
+        }
+        
+        .rowcusto .top{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .rowcusto .top p, .top h4
+        {
+            margin: 0;
+            padding: 5px;
+        }
+        .rowcusto .top h5
+        {
+            margin: 0;
+            padding: 5px 0px;
+            color: #28a745;
+            font-weight: bold;
+            border-bottom: 2px solid #28a745;
+        }
+        .rowcusto ul 
+        {
+            margin: 0;
+            padding: 10px;
+        }
+        .rowcusto ul li
+        {
+            overflow: hidden;
+        }
+        .rowcusto ul li span
+        {
+            float: right;
+            margin-left: 20px;
+        }
+        ul li i
+        {
+            float: left;
+            width: calc(100% - 20px - 85px);
+            display: block;
+            height: 100%;
+            font-style: normal;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .top{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+        .top p, .top h4
+        {
+            margin: 0;
+            padding: 5px;
+        }
+        .top h5
+        {
+            margin: 0;
+            padding: 5px 0px;
+            color: #28a745;
+            font-weight: bold;
+            border-bottom: 2px solid #28a745;
+        }
+        img
+        {
+            width: 100%;
+        }
+
+        .view p
+        {
+            margin: 5px 0px;
+            text-align: center;
+        }
+        li
+        {
+            margin: 2px 0px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="header bg-dark">
+
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="announ col-md-5">
+                <div class="top">
+                    <h5>
+                        공지사항
+                    </h5>
+                    <p>더보기 +</p>
+                </div>
+                <ul>
+                    <li> <a href="#"><i> 뭐라고 써있는거야...asdfasdf </i> <span>2004-10-25</span> </a></li>
+                    <li> <a href="#"><i> 뭐라고 써있는거야...asdfasdf </i> <span>2004-10-25</span> </a></li>
+                    <li> <a href="#"><i> 뭐라고 써있는거야...asdfasdf </i> <span>2004-10-25</span> </a></li>
+                </ul>
+            </div>
+            <div class="coll custo col-md-3">
+                <h5>고객문의</h5>
+                <p class="display-6">전화상담 가능시간 : 오전 09시 ~ 오후 06시</p>
+                <p class="display-7">✆070-000-000-0000</p>
+                <p class="display-8">농협 000-0000-00000-00 000</p>
+            </div>
+            <div class="rowcusto col-md-4">
+                <div class="top">
+                    <h5>
+                        고객문의
+                    </h5>
+                    <p>더보기 +</p>
+                </div>
+                <ul>
+                    <li> <a href="#"><i> 뭐라고 써있는거야...asdfasdfasdf </i> <span>2004-10-25</span> </a> </li>
+                    <li> <a href="#"><i> 뭐라고 써있는거야...asdfasdfasdf </i> <span>2004-10-25</span> </a></li>
+                    <li> <a href="#"><i> 뭐라고 써있는거야...asdfasdfasdf </i> <span>2004-10-25</span> </a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="view">
+            <div class="top">
+                <h5>
+                    시설보기
+                </h5>
+                <p>더보기 +</p>
+            </div>
+            <br>
+            <div class="itmes">
+                <div class="row">
+                    <div class="itme col-md-4">
+                        <div class="imgs">
+                            <img src="../img/981.jpg" alt="">
+                        </div>
+                        <p>시설사진</p>
+                    </div>
+                    <div class="itme col-md-4">
+                        <div class="imgs">
+                            <img src="../img/982.png" alt="">
+                        </div>
+                        <p>시설사진</p>
+                    </div>
+                    <div class="itme col-md-4">
+                        <div class="imgs">
+                            <img src="../img/981.jpg" alt="">
+                        </div>
+                        <p>시설사진</p>
+                    </div>
+                    <div class="itme col-md-4">
+                        <div class="imgs">
+                            <img src="../img/982.png" alt="">
+                        </div>
+                        <p>시설사진</p>
+                    </div>
+                    <div class="itme col-md-4">
+                        <div class="imgs">
+                            <img src="../img/981.jpg" alt="">
+                        </div>
+                        <p>시설사진</p>
+                    </div>
+                    <div class="itme col-md-4">
+                        <div class="imgs">
+                            <img src="../img/982.png" alt="">
+                        </div>
+                        <p>시설사진</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="view">
+            <div class="top">
+                <h5>
+                    시설보기
+                </h5>
+                <p>더보기 +</p>
+            </div>
+            <br>
+            <div class="itmes">
+                <div class="row">
+                    <div class="itme col-md-4">
+                        <div class="imgs">
+                            <img src="../img/981.jpg" alt="">
+                        </div>
+                        <p>시설사진</p>
+                    </div>
+                    <div class="itme col-md-4">
+                        <div class="imgs">
+                            <img src="../img/982.png" alt="">
+                        </div>
+                        <p>시설사진</p>
+                    </div>
+                    <div class="itme col-md-4">
+                        <div class="imgs">
+                            <img src="../img/981.jpg" alt="">
+                        </div>
+                        <p>시설사진</p>
+                    </div>
+                    <div class="itme col-md-4">
+                        <div class="imgs">
+                            <img src="../img/982.png" alt="">
+                        </div>
+                        <p>시설사진</p>
+                    </div>
+                    <div class="itme col-md-4">
+                        <div class="imgs">
+                            <img src="../img/981.jpg" alt="">
+                        </div>
+                        <p>시설사진</p>
+                    </div>
+                    <div class="itme col-md-4">
+                        <div class="imgs">
+                            <img src="../img/982.png" alt="">
+                        </div>
+                        <p>시설사진</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+</body>
+</html>

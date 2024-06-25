@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #text-box{
+            width: 600px;
+            margin: 0 auto;
+        }
+
+        #text-box h3{
+            font-size: 25px;
+        }
+
+        #text-box p
+        {
+            color: #444; font-size: 14px;
+        }
+
+        #text-box p.textindent1
+        {
+            text-indent: 50px;
+        }
+
+        #text-box p.textindent2
+        {
+            text-indent: -50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="text-box">
+
+        <h3>text-indent : 양수 50px; 들여쓰기</h3>
+        <p class="textindent1">
+브라우저가 자동으로 처리하는것보다 세밀하게 조절할 수 있다.
+
+시간에 따라 변환되므로 % 를 사용해 중간 지점들에 속성을 넣는다.
+동일한 % 값이 여러번 입력될 경우 Cascading 법칙에 따라 아래쪽 속성만 적용됨을 주의!
+
+키프레임은 순서대로 나열 가능하며, 지정된 % 의 순서대로 처리된다.
+
+최소한 from / to 혹은 0% / 100% 같은 시간에 대한 규칙은 포함해야 한다.
+
+작성된 키프레임 이름은 여러 요소에서 애니메이션으로 사용될 수 있다.
+        </p>
+
+        <h3>text-indent : 음수 -50px; 들여쓰기</h3>
+        <p class="textindent2">
+            브라우저가 자동으로 처리하는것보다 세밀하게 조절할 수 있다.
+
+            시간에 따라 변환되므로 % 를 사용해 중간 지점들에 속성을 넣는다.
+            동일한 % 값이 여러번 입력될 경우 Cascading 법칙에 따라 아래쪽 속성만 적용됨을 주의!
+            
+            키프레임은 순서대로 나열 가능하며, 지정된 % 의 순서대로 처리된다.
+            
+            최소한 from / to 혹은 0% / 100% 같은 시간에 대한 규칙은 포함해야 한다.
+            
+            작성된 키프레임 이름은 여러 요소에서 애니메이션으로 사용될 수 있다.
+        </p>
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document2</title>
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box;}
+        body{font-family: Helvetica, sans-serif;}
+        ul{list-style: none;}
+        a{text-decoration: none; color: black;}
+    </style>
+    <style>
+        .header
+        {
+            height: 45px;
+            line-height: 45px;
+
+            background: url(../img/imgs/header_background.png);
+
+            position: relative; 
+            text-align: center;
+            width: 100%;
+        }
+
+        .headerc h1
+        {
+            color: #fff;
+        }
+        
+        .header>a, .header>label
+        {
+            display: block;
+            height: 32px;
+            position: absolute;
+        } 
+
+        .header>a.left
+        {
+            width: 62px;
+            left: 5px;
+            top: 7px;
+            background: url(../img/imgs/sprites.png);
+            text-indent: -999999px;
+        }
+        .header>label.right
+        {
+            width: 32px;
+            right: 5px;
+            top: 7px;
+            background: url(../img/imgs/sprites.png);
+            background-position: -62px 0px;
+            text-indent: -999999px;
+
+        }
+
+        #toggle
+        {
+            display: none;
+        }
+
+        .toggle_wrap
+        {
+            display: none;
+        }
+
+        #toggle:checked + .wrap>.toggle_wrap
+        {
+            display: block;
+        }
+        .toggle_wrap
+        {
+            padding: 15px;
+            background: black;
+        }
+        .toggle_gnb
+        {
+            background: #fff;
+            padding: 5px;
+        }
+        .toggle_gnb>ul
+        {
+            overflow: hidden;
+        }
+        .toggle_gnb>ul>li
+        {
+            width:80px; 
+            float: left;
+        }
+
+        .top_gnb
+        {
+            overflow: hidden;
+            background-color: #842111;
+        }
+        .top_gnb>div>a
+        {
+            float: left;
+            width: 25%;
+            height: 35px;
+            line-height: 35px;
+            color: #fff;
+            text-align: center;
+        }
+        .bottom_gnb
+        {
+            display: table;
+            width: 100%;
+            border-bottom: 1px solid black;
+        }
+        .bottom_gnb div
+        {
+            display: table-cell;
+            position: relative;
+        }
+        .bottom_gnb>div>a
+        {
+            display: block;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+        }
+        .bottom_gnb>div>a::before
+        {
+            display: block;
+            border-left: 1px solid black;
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 100%;
+            left: -1px;
+        }
+
+        .section_header{
+            padding:20px;
+        }
+        .section_aticle{
+            padding:10px;
+        }
+
+        .fot
+        {
+            padding: 10px;
+            border-top: 3px solid black;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <input type="checkbox" name="" id="toggle">
+    <div class="wrap">
+
+        <div class="header">
+            <a href="#" class="left">main</a>
+            <h1>Mobile</h1>
+            <label class="right" for="toggle"> Toggle </label>
+        </div>
+
+        <div class="toggle_wrap">
+            <div class="toggle_gnb">
+                <ul>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                </ul>
+            </div>
+        </div>
+        <nav class="top_gnb">
+            <div><a href="#">TOP</a></div>
+            <div><a href="#">TOP</a></div>
+            <div><a href="#">TOP</a></div>
+            <div><a href="#">TOP</a></div>
+        </nav>
+        <nav class="bottom_gnb">
+            <div><a href="#">BOTTOM</a></div>
+            <div><a href="#">BOTTOM</a></div>
+            <div><a href="#">BOTTOM</a></div>
+            <div><a href="#">BOTTOM</a></div>
+            <div><a href="#">BOTTOM</a></div>
+        </nav>
+
+        <section class="main_section">
+            <header class="section_header">
+                <h1>연세아이티</h1>
+                <time>2024-06-19</time>
+            </header>
+            <article class="section_aticle">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus animi soluta ratione voluptatibus incidunt expedita obcaecati, magni nam omnis, ad cumque voluptates alias illum eum iusto, a ipsum ex voluptate!</p>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus animi soluta ratione voluptatibus incidunt expedita obcaecati, magni nam omnis, ad cumque voluptates alias illum eum iusto, a ipsum ex voluptate!</p>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus animi soluta ratione voluptatibus incidunt expedita obcaecati, magni nam omnis, ad cumque voluptates alias illum eum iusto, a ipsum ex voluptate!</p>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus animi soluta ratione voluptatibus incidunt expedita obcaecati, magni nam omnis, ad cumque voluptates alias illum eum iusto, a ipsum ex voluptate!</p>
+                <br>
+            </article>
+        </section>
+
+        <div class="fot">
+            <h3>연세IT미래교육원</h3>
+            <address>수원시 장안구 영화동</address>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+            /* border: 1px solid black; */
+
+        }
+        a{
+            color: black;
+            text-decoration: none;
+            display: block;
+        }
+        ul
+        {
+            list-style: none;
+        }
+
+        .continer
+        {
+            width: 1200px;
+            margin: auto;
+            display: flex;
+        }
+        .maps
+        {
+            width: 800px;
+            height: 100%;
+            text-align: center;
+            margin-top: 4px;
+        }
+        .maps hr
+        {
+            width: 50px;
+            margin: 15px auto;
+            border: 1.5px solid #aaa;
+        }
+
+        .sade
+        {
+            width: 400px;
+            height: 100%;
+            padding-left: 30px;
+            margin-top: 60px;
+        }
+
+        .sade img
+        {
+            width: 80px;
+            height: 60px;
+            object-fit: cover;
+        }
+        #map
+        {
+            margin-top: 10px;
+            width: 800px;
+            height:580px;
+            border: 2px solid #002fff;
+        }
+        .sadehead
+        {
+            height: 30px;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid rgb(129, 129, 129);
+        }
+        .sadehead h2
+        {
+            font-size: 1.2em;
+            color: rgb(0, 100, 0);
+            border-bottom: 1px solid rgb(0, 100, 0);
+        }
+        .sadehead>p
+        {
+            line-height: 28px;
+        }
+        .sademenu
+        {
+            margin-top: 60px;
+        }
+
+        .sademenu ul
+        {
+            margin-top: 10px;
+        }
+
+        .sademenu ul li
+        {
+            display: flex;
+            padding: 5px;
+        }
+        .sademenu ul li p
+        {
+            width: calc(100% - 80px);
+            height: 60px;
+            padding: 5px;
+        }
+
+    </style>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1kuQPXDh7iqbFhMXuoHhZ3DtlUGrZ7PU&callback=initMap"></script> 
+    <script>
+        function initMap() {
+          var seoul = { lat: 37.5642135 ,lng: 127.0016985 };
+          var map = new google.maps.Map(
+            document.getElementById('map'), {
+              zoom: 12,
+              center: seoul
+            });
+        }
+      </script>
+</head>
+<body>
+
+    <div class="continer">
+        <div class="maps">
+            <h1>Contact Us</h1>
+            <hr>
+            <p>
+                ⚑ 주소 : 경기도 00시 00동 000-00번지 000
+            </p>
+            <div id="map"></div>
+
+
+            
+        </div>
+
+        <div class="sade"> 
+            
+            <div class="sademenu">
+                <div class="sadehead">
+                    <h2>특별함</h2>
+
+                    <p>더보기+</p>
+                </div>
+                <ul>
+                    <li>
+                        <img src="../img/work-1.jpg" alt="">
+                        <p>
+                            사계절 실내 바비큐에서 편한하게 마음것 드세요~
+                        </p>
+                    </li>
+                    <li>
+                        <img src="../img/work-2.jpg" alt="">
+                        <p>
+                            사계절 실내 바비큐에서 편한하게 마음것 드세요~
+                        </p>
+                    </li>
+                    <li>
+                        <img src="../img/work-3.jpg" alt="">
+                        <p>
+                            사계절 실내 바비큐에서 편한하게 마음것 드세요~
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="sademenu">
+                <div class="sadehead">
+                    <h2>인근여행지</h2>
+
+                    <p>더보기+</p>
+                </div>
+                <ul>
+                    <li>
+                        <img src="../img/work-4.jpg" alt="">
+                        <p>
+                            사계절 실내 바비큐에서 편한하게 마음것 드세요~
+                        </p>
+                    </li>
+                    <li>
+                        <img src="../img/work-5.jpg" alt="">
+                        <p>
+                            사계절 실내 바비큐에서 편한하게 마음것 드세요~
+                        </p>
+                    </li>
+                    <li>
+                        <img src="../img/work-6.jpg" alt="">
+                        <p>
+                            사계절 실내 바비큐에서 편한하게 마음것 드세요~
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
