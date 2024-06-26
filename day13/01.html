@@ -13,115 +13,32 @@
             logDiv.appendChild(newLogEntry);
         }
     </script>
+    <script>
+        let stp = 0
+        let num = 0
+        let player = ['철수','영희','민수','숙희']
+        for (let index = 0; stp < 1234; index++) {
+            if(index % 3 == 0)
+            {
+                stp++
+                if(stp == 1234)
+                    console.log(player[num],stp)
+            }
+            num < 3 ? num++ : num = 0
+        }
+
+
+    </script>
 </head>
 <body>
 
     <div id="log">
+
         <script>
-
-            // let num10 = 10
-            // let num20 = 20
-            // let num03 = 3
-
-            // log(num10 + num20)
-            // log(num10 - num20)
-            // log(num10 * num20)
-            // log(num10 / num20)
-            // log(num10 % num03)
-
-            // let sum01 = 10;
-            // log(sum01)
-            // sum01 += 5
-            // log(sum01)
-            // sum01 -= 5
-            // log(sum01)
-            // sum01 *= 5
-            // log(sum01)
-            // sum01 /= 5
-            // log(sum01)
-            // sum01 %= 5
-            // log(sum01)
-
-            // let a = 10
-            // let b, y
-            // let x = 10
-
-            // b = a++
-            // log(a,b)
-
-            // y = ++x
-            // log(a,x)
-
-            // log(3+4)
-            // log('고양' + '이')
-            // log('고양이'+2+'마리')
-            // log(2+'마리')
-            // log(3+2+'마리')
-            // log('고양이'+(3+2)+'마리')
-            // log(`고양이 ${3+2}마리`)
-
-            // let a = 20
-            // let b = 10
-            // let c = '10'
-
-            // log(a>b)
-            // log(b>c)
-            // log(b>=c)
-            // log(b==c)
-            // log(b===c)
-            // log(b!=c)
-            // log(b!==c)
-
-            // let id = 'main'
-            // let pwd = '1234' 
-            // let userId = 'main'
-            // let userPwd = '1234'
-
-            // let result = (id === userId) && (pwd === userPwd)
-            // log(result)
-
-            // id = 'main'
-            // pwd = 'A0123'
-            // userId = prompt("아이디 입력")
-            // userPwd = prompt("패스워드 입력")
-            // result = (id === userId) && (pwd === userPwd)
-            // log('로그인 결과 :', result)
-
-            // let classA = prompt('소프트 개발점수')
-            // let classB = prompt('소프트 설계 점수')
-            // let classC = prompt('프로그램 언어활용 점수')
-            // let classD = prompt('정보시스템구축관리 점수')
-
-            // let resultA = Number(classA) >= 40
-            // let resultB = Number(classB) >= 40
-            // let resultC = Number(classC) >= 40
-            // let resultD = Number(classD) >= 40
-
-            // let total = (Number(classA) + Number(classB) + Number(classC) + Number(classD))
-            // let avg = total/4 >=60
-
-            // log('합격 :', resultA && resultB && resultC && resultD && avg)
-
-            let agv = prompt('나이 입력')
-            let pay = prompt('자산 입력')
-            let loan = prompt('희망 대출금 입력')
-
-            let agvResult = agv >= 20
-
-            let payResult_1 = pay >= 100 
-            let payResult_2 = pay >= 200
-
-            let loanResult_1 = loan <= 50 
-            let loanResult_2 = loan <= 100
-
-            let result =agvResult && ( (payResult_2 && loanResult_2) || (payResult_1 && loanResult_1) )
-
-            log(loan+'원 대출 승인 :', result)
-            //T F F F F
-
-
-
-
+            for(let i = 1; i < 3; i++)
+            {
+                log(i)
+            }
 
 
             for (let index = 0; index < 5; index++) {
@@ -199,9 +116,10 @@
                 // }
                 document.writeln('<br>')
             }
-            
         </script>
+
     </div>
+
     
 </body>
 </html>
