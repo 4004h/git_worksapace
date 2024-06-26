@@ -14,6 +14,7 @@
         }
     </script>
     <script>
+        let max = 3
         let stp = 0
         let num = 0
         let player = ['철수','영희','민수','숙희']
@@ -21,10 +22,20 @@
             if(index % 3 == 0)
             {
                 stp++
-                if(stp == 1234)
-                    console.log(player[num],stp)
+
+                if(stp==1234)
+                {
+                    console.log(player[num],stp+"번째")
+                }
+                if(stp == 103)
+                {
+                    max--
+                    player.splice(num,1)
+                }
             }
-            num < 3 ? num++ : num = 0
+            // console.log(player[num], num, stp)
+
+            num < max ? num++ : num = 0
         }
 
 
@@ -35,20 +46,108 @@
     <div id="log">
 
         <script>
-            for(let i = 1; i < 3; i++)
-            {
-                log(i)
-            }
+            // for(let i = 1; i < 3; i++)
+            // {
+            //     log(i)
+            // }
 
+            // let sum = 0
+            // for (let index = 1; index <= 10; index++) {
+            //     sum+=index
+            // }
+            // log(sum)
 
-            for (let index = 0; index < 5; index++) {
-                for (let kniex = 0; kniex <= index; kniex++) {
-                    document.write('*')
-                }
-                document.writeln('<br>')
+            // let sum = 1000000
+            // for (let index = 0; index < 12; index++) {
+            //     sum *= 1.01
+            // }
+            // log(sum)
+
+            // for (let index = 2; index <= 9; index++) {
+            //     for (let jndex = 2; jndex <= 9; jndex++) {
+            //         log(index,'*', jndex, '=', index*jndex)
+            //     }
+            //     document.writeln('<br>')
+            // }
+
+            // let jndex = 2;
+            // for (let index = 2; index <= 9; index++) {
+            //     log(jndex,'*', index, '=', index*jndex)
+            //     if(index >= 9 && jndex < 9)
+            //     {
+            //         jndex++
+            //         index = 2
+            //         log('*')
+            //     }
+            // }
+
+            // for (let index = 0; index < 5; index++) {
+            //     for (let kniex = 0; kniex <= index; kniex++) {
+            //         document.write('*')
+            //     }
+            //     document.writeln('<br>')
+            // }
+
+            // let nums = 1;
+            // let sum = 0
+            // while (nums <=10) {
+            //     sum +=nums
+            //     nums++
+            // }
+
+            // nums = 1;
+            // sum = 1000000
+            // while (nums <=12) {
+            //     sum *= 1.01
+            //     nums++
+            // }
+            // log(sum)
+
+            // for (let index = 2; index <= 10; index+=2) {
+            //     log(index)
+            // }
+
+            // for (let index = 1; index <= 10; index++) {
+            //     if(index%3 == 0)
+            //         continue
+            //     log(index)
+            // }
+            
+            // for (let index = 1; index <= 10; index++) {
+            //     if(index%3 != 0)
+            //         log(index)
+            // }
+
+            // for (let index = 1; index < 81; index++) {
+            //     log(Math.ceil(index / 9),'*', ((index % 9)+1) , '=', Math.ceil(index / 9) * ((index % 9)+1) )
+            // }
+            // document.writeln('<br>')
+
+            // let dan = 2
+            // for (let index = 2; index <= 9 && dan <= 9; index++) {
+            //     log(dan,'*', index, '=',dan * index)
+            //     if(index >= 9)
+            //     {
+            //         dan++
+            //         index=2
+            //     }
+            // }
+
+            for (let index = 9; index < 81; index++) {
+                log(parseInt(index/9)+1,'*', index % 9 + 1 , '=', (parseInt(index/9)+1) * (index % 9 + 1) )
             }
             document.writeln('<br>')
 
+            for (let index = 0; index < 81; index++) {
+                let dan = parseInt(index/9)+1
+                let n = index%9+1
+                log(dan, '*', n,'=', dan * n)
+            }
+
+
+
+            
+            document.writeln('<br>')
             for (let index = 5; index > 0; index--) {
                 for (let kniex = 0; kniex < index; kniex++) {
                     document.write('*')
@@ -90,7 +189,7 @@
                 for (let jndex = 5; jndex > index; jndex--) {
                     document.write('*')
                 }
-                for (let jndex = 5; jndex > index+1; jndex--) {
+                for (let kndex = 5; kndex > index+1; kndex--) {
                     document.write('*')
                 }
                 // for (let kniex = 0; kniex < index; kniex++) {
@@ -108,12 +207,48 @@
                     document.write('*')
                 }
                                 
-                for (let jndex = 0; jndex < index+2; jndex++) {
+                for (let kndex = 0; kndex < index+2; kndex++) {
                     document.write('*')
                 }
                 // for (let kniex = 0; kniex < index; kniex++) {
                 //     document.write('&nbsp')
                 // }
+                document.writeln('<br>')
+            }
+            document.writeln('<br>')
+
+            for (let index = 0; index < 5; index++) {
+                for (let lndex = 0; lndex < index; lndex++) {
+                    document.write('&nbsp')
+                }
+                for (let jndex = 4; jndex > index-1; jndex--){
+                    document.write('*')
+                }
+
+                for (let jndex = 4; jndex > index; jndex--){
+                    document.write('&nbsp')
+                }
+                for (let lndex = 0; lndex < index+1; lndex++) {
+                    document.write('*')
+                }
+                document.writeln('<br>')
+            }
+
+            for (let index = 0; index < 5; index++) {
+                for (let jndex = 4; jndex > index-1; jndex--){
+                    document.write('*')
+                }
+                for (let lndex = 0; lndex < index; lndex++) {
+                    document.write('&nbsp')
+                }
+
+                for (let lndex = 0; lndex < index+1; lndex++) {
+                    document.write('*')
+                }
+                for (let jndex = 4; jndex > index; jndex--){
+                    document.write('&nbsp')
+                }
+
                 document.writeln('<br>')
             }
         </script>
