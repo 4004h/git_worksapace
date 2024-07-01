@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/box.css">
+</head>
+<body>
+
+    <!-- <dl>
+        <dt>에벨탑의 신랑신부</dt>
+        <dd><img src="./images/pic01.jpg" alt=""></dd>
+    </dl> -->
+    <script>
+        //1차 자바스크리트로 그림태그만들기
+        //document.write('<dl><dt>에벨탑의 신랑신부</dt><dd><img src="./images/pic01.jpg" alt=""></dd></dl>');
+
+        //2차 자바스크리트로 변수에 해당하는 코드로 분류하기
+        // document.write('<dl><dt>','에벨탑의 신랑신부','</dt><dd><img src="','./images/pic01.jpg','" alt=""></dd></dl>');
+
+        //3차
+        // let title = '에벨탑의 신랑신부123';
+        // let imgAddr = './images/pic03.jpg';
+        // document.write(`
+        //     <dl>
+        //         <dt>${title}</dt>
+        //         <dd><img src="${imgAddr}" alt=""></dd>
+        //     </dl>
+        // `)
+
+        //4차
+        // let titles = new Array('에벨탑의 신랑신부','꿈','무용실','파어노치는 소녀들')
+        // let imgAddrs = new Array('./images/pic01.jpg','./images/pic02.jpg','./images/pic03.jpg','./images/pic04.jpg') 
+        // //push쓰기 귀찮.................
+        // for (let index = 0; index < titles.length; index++) {
+        //     document.write(`
+        //         <dl>
+        //             <dt>${titles[index]}</dt>
+        //             <dd><img src="${imgAddrs[index]}" alt=""></dd>
+        //         </dl>
+        //     `)
+        // }
+
+        //5~7차 object
+        // let pictures = new Array()
+
+        // let picture = {
+        //     titles : '에벨탑의 신랑신부',
+        //     imgAddrs : './images/pic01.jpg'
+        // }
+        // pictures.push(picture)
+
+        // picture = {
+        //     titles : '꿈',
+        //     imgAddrs : './images/pic02.jpg'
+        // }
+        // pictures.push(picture)
+
+        // picture = {
+        //     titles : '무용실',
+        //     imgAddrs : './images/pic03.jpg'
+        // }
+        // pictures.push(picture)
+
+        // picture = {
+        //     titles : '파어노치는 소녀들',
+        //     imgAddrs : './images/pic04.jpg'
+        // }
+        // pictures.push(picture)
+
+        // for (let index = 0; index < pictures.length; index++) {
+        //     document.write(`
+        //         <dl>
+        //             <dt>${pictures[index].titles}</dt>
+        //             <dd><img src="${pictures[index].imgAddrs}" alt=""></dd>
+        //         </dl>
+        //     `)
+        // }
+
+        //8차 object
+        // let pictures = new Array()
+
+        // function picture(titles,imgAddrs) {
+        //     this.title = titles
+        //     this.imgAddr = imgAddrs
+        // }
+        // // let pic = new picture()
+
+        // pictures.push(new picture('에벨탑의 신랑신부', './images/pic01.jpg'))
+        // pictures.push(new picture('꿈', './images/pic02.jpg'))
+        // pictures.push(new picture('무용실', './images/pic03.jpg'))
+        // pictures.push(new picture('파어노치는 소녀들', './images/pic04.jpg'))
+
+
+
+        // for (let index = 0; index < pictures.length; index++) {
+        //     document.write(`
+        //         <dl>
+        //             <dt>${pictures[index].title}</dt>
+        //             <dd><img src="${pictures[index].imgAddr}" alt=""></dd>
+        //         </dl>
+        //     `)
+        // }
+
+        //9~10차
+        // let pictures = new Array()
+        // let picture = {
+        //     titles : '에벨탑의 신랑신부',
+        //     imgAddrs : './images/pic01.jpg',
+        //     show : function() {
+        //         document.write(`
+        //             <dl>
+        //                 <dt>${this.titles}</dt>
+        //                 <dd><img src="${this.imgAddrs}" alt=""></dd>
+        //             </dl>
+        //         `)
+        //     }
+        // }
+        // pictures.push(picture)
+        // picture = {
+        //     titles : '꿈',
+        //     imgAddrs : './images/pic02.jpg',
+        //     show : function() {
+        //         document.write(`
+        //             <dl>
+        //                 <dt>${this.titles}</dt>
+        //                 <dd><img src="${this.imgAddrs}" alt=""></dd>
+        //             </dl>
+        //         `)
+        //     }
+        // }
+        // pictures.push(picture)
+        // picture = {
+        //     titles : '무용실',
+        //     imgAddrs : './images/pic03.jpg',
+        //     show : function() {
+        //         document.write(`
+        //             <dl>
+        //                 <dt>${this.titles}</dt>
+        //                 <dd><img src="${this.imgAddrs}" alt=""></dd>
+        //             </dl>
+        //         `)
+        //     }
+        // }
+        // pictures.push(picture)
+        // picture = {
+        //     titles : '파어노치는 소녀들',
+        //     imgAddrs : './images/pic04.jpg',
+        //     show : function() {
+        //         document.write(`
+        //             <dl>
+        //                 <dt>${this.titles}</dt>
+        //                 <dd><img src="${this.imgAddrs}" alt=""></dd>
+        //             </dl>
+        //         `)
+        //     }
+        // }
+        // pictures.push(picture)
+
+        // for (let index = 0; index < pictures.length; index++) {
+        //     pictures[index].show()
+        // }
+
+        //11~차
+        let pictures = new Array()
+
+        function picture(titles, imgAddrs, author, year) {
+            this.title = titles
+            this.imgAddr = imgAddrs
+            this.author = author
+            this.year = year
+            this.show = function () {
+                document.write(`
+                    <dl>
+                        <dt>${this.title}</dt>
+                        <dd><img src="${this.imgAddr}" alt=""></dd>
+                        <dd>${this.author}</dd>
+                    </dl>
+                `)
+            }
+        }
+        // let pic = new picture()
+
+        pictures.push(new picture('에벨탑의 신랑신부', './images/pic01.jpg', '사갈', 1900))
+        pictures.push(new picture('꿈', './images/pic02.jpg', '피카소', 1900))
+        pictures.push(new picture('무용실', './images/pic03.jpg', '에드가', 1900))
+        pictures.push(new picture('파어노치는 소녀들', './images/pic04.jpg', '르누아르', 1900))
+
+        for (let index = 0; index < pictures.length; index++) {
+            pictures[index].show()
+        }
+
+
+
+
+
+
+
+
+        
+    </script>
+
+</body>
+</html>
