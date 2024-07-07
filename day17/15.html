@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery.min.js"></script>
+    <style>
+        #box
+        {
+            width: 700px;
+            margin: 0 auto;
+            background-color: black;
+            padding: 10px;
+            padding-bottom: 1px;
+        }
+        ul
+        {
+            margin: 0;
+            padding: 0;
+            width: 700px;
+            display: flex;
+            justify-content: flex-start;
+            list-style: none;
+            flex-wrap: wrap
+        }
+        li
+        {
+            margin: 6.5px;
+        }
+        img
+        {
+            border: yellowgreen 6px solid;
+        }
+        #box>p
+        {
+            text-align: center;
+            margin: 20px 0;
+        }
+        #box>p>button
+        {
+            width: 120px;
+            height: 30px;
+            margin: 0 10px;
+            background-color: #196aff;
+            color: white;
+            font-size: 1em;
+            font-family: 'd2coding';
+        }
+    </style>
+</head>
+<body>
+
+    <div id="box">
+        <ul>
+            <li><img src="./images (3)/pic3.jpg" alt="images01"></li>
+            <li><img src="./images (3)/pic2.jpg" alt="images02"></li>
+            <li><img src="./images (3)/pic1.jpg" alt="images03"></li>
+            <li><img src="./images (3)/pic4.jpg" alt="images04"></li>
+        </ul>
+        <p>
+            <button id="btn01"><-</button>
+            <button id="btn02">-></button>
+        </p>
+    </div>
+
+    <script>
+        $(function () {
+            $("#btn01").click(()=>{
+                $("ul>li:first-child").appendTo('ul')
+            })
+            $("#btn02").click(()=>{
+                $("ul>li:last-child").prependTo('ul')
+
+            })
+        })
+    </script>
+    
+</body>
+</html>
+

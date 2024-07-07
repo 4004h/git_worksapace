@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Form Selectors</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+<style>
+
+</style>
+
+</head>
+<body>
+
+    <div>
+        <h1>Ajax예제</h1>
+        <p id="main"></p>
+    </div>
+
+    <script>
+
+        $(function () {
+            getData()
+        })
+
+
+        function getData(){
+            $.get("./test/testxmldata.xml", successFn)
+            .fail(errorFn)
+            .always(completeFn)
+        }
+
+        function successFn(data){
+            let title = data.getElementsByTagName("title")
+            let name = data.getElementsByTagName("name")
+            console.log("data", title)
+            let cut = 0
+            for(itme of title)
+            {
+                $('#main').append(itme.textContent+" 타이틀 ");
+                $('#main').append(name[cut].textContent+" 이름 <br>");
+                cut++
+            }
+        }
+        function errorFn(xhr, status, strErr){
+            $('#main').append(xhr+"<br>"+status+"<br>"+strErr+"<br>");
+        }
+        function completeFn(){
+            $('#main').append('작업 완료');
+        }
+    </script>
+
+
+</body>
+</html>

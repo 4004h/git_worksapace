@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <style>
+        section
+        {
+            width: 500px;
+            margin: 0 auto;
+            overflow: hidden;
+            border: 1px solid black;
+        }
+
+        div
+        {
+            width: 250px;
+            float: left;
+            text-align: center;
+            border: 0px solid black;
+        }
+
+        p
+        {
+            margin: 50px auto;
+            text-align: center;
+
+        }
+
+        .box
+        {
+            width: 150px;
+            height: 150px;
+            background-color: red;
+        }
+    </style>
+    <script>
+        $(function(){
+
+
+            $(".btn01").on("click",function () {
+                $(".general").stop().slideToggle(1000)
+            })// .stop() | 동작을 취소
+
+            // :not(:animated) | 완전히 끝날때 까지
+            $(".btn02").on("click",function () {
+                $(".spamming:not(:animated)").slideToggle(1000)
+            })
+        })
+
+    </script>
+
+</head>
+<body>
+    <section>
+        <div id="box01">
+            <p>
+                <button class="btn01">일반</button>
+            </p>
+            <p class="box general"></p>
+        </div>
+        <div id="box02">
+            <p>
+                <button class="btn02">광클</button>
+            </p>
+            <p class="box spamming"></p>
+        </div>
+    
+    </section>
+
+
+    
+</body>
+</html>

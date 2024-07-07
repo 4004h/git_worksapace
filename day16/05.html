@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        window.onload = ()=>{
+            //이벤트 핸들러 연결 2
+            const res_2 = document.querySelector("#res_2")
+            res_2.onclick = ()=>{
+                alert("예약 2")
+            }//장 간편 예전브라우저 동작 / 단 1이벤트 = 1핸들러 핸들러 변경불가
+
+            //이벤트 핸들러 연결 3
+            const res_3 = document.querySelector("#res_3")
+            res_3.addEventListener("click", ()=>{
+                alert("예약 3")
+            })
+            //장 여러 이벤트 적용 / 단 예전브라우저 불가
+        }
+
+        //이벤트 핸들러 연결 1
+        function doclick_1(params) {
+            alert("예약 1")
+        }
+
+    </script>
+</head>
+<body>
+
+    <div class="cta">
+        <p id="res_1" onclick="doclick_1()">예약 1.</p>
+        <p id="res_2">예약 2.</p>
+        <p id="res_3">예약 3.</p>
+        <section id="no" class="hide">
+          <h3 class="title">Sorry about that!</h3>
+          <p>By some weird coincidence, all the rooms at Moonwalk Manor are booked out for the date you planned to take your trip. Unfortunately we are unable to provide you with sufficient lodging for your party at this time. Moonwalk Manor is very busy and your satisfaction is our top priority. When you take your first steps in the moon dust, your life will change. We are always at your service. Your satisfaction matters to us.</p>
+        </section>
+    </div>
+    
+    
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <style>
+
+    </style>
+    <script>
+        $(function () {
+            $("#b01").click(()=>{
+                $(".no01").replaceWith("<h2> replace변환 </h2>")
+            })
+            $("#b02").click(()=>{
+                $(".no02").html("<h2> html변환 </h2>")
+            })
+            $("#b03").click(()=>{
+                $(".no03").remove()
+            })
+            $("#b04").click(()=>{
+                $(".no04").empty()
+            })
+            $("#b05").click(()=>{
+                let temp = $(".no06").clone()
+                $(".no01").prepend(temp)
+            })
+            $("#b06").click(()=>{
+                let temp = $(".no07").detach()
+                $(".no01").prepend(temp)
+            })
+
+
+
+
+            
+        })
+
+    </script>
+
+</head>
+<body>
+    <button id="b01"> replace </button>
+    <button id="b02"> html </button>
+    <button id="b03"> remove </button>
+    <button id="b04"> empty </button>
+    <button id="b05"> clone </button>
+    <button id="b06"> detach </button>
+
+    <p class="no01"> no01 요소바꾸기 </p>
+    <p class="no02"> no02 내영바꾸기 </p>
+    <p class="no03"> no03 없애기 </p>
+    <p class="no04"> no04 비우기 </p>
+    <!-- <p class="no05"> no05 채우기 </p> -->
+    <p class="no06"> no06 복사 </p>
+    <p class="no07"> no07 자르기 </p>
+    
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Form Selectors</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+<style>
+    span{
+        display: none;
+    }
+
+</style>
+
+</head>
+<body>
+
+    <p>
+        이름(한글)
+        <input type="text" name="" id="han">
+        <span>한글만 입력</span>
+    </p>
+
+    <p>
+        이름(영어)
+        <input type="text" name="" id="eng">
+        <span>영어만 입력</span>
+    </p>
+
+    <section>
+        <Form action="" method="post">
+            <fieldset>
+                <legend>가격</legend>
+                <ul>
+                    <li>
+                        <label for="userPrice">갯수</label>
+                        <input type="number" min="0" max="40" id="userPrice" value="0">
+                    </li>
+                    <li>
+                        <button>계산</button>
+                    </li>
+                </ul>
+                <p></p>
+            </fieldset>
+        </Form>
+    </section>
+    
+    <script>
+        $(function () {
+            let han = /^[ㄱ-ㅎ가-힣]+$/
+            let eng = /^[a-zA-Z]+$/
+            $("input#han").on("change",function () {
+                console.log(han.test($(this).val()))
+                if(!han.test($(this).val()))
+                    $(this).next("span").css("display","inline").delay(800).fadeOut(200)
+
+            })
+            $("input#eng").on("change",function () {
+                console.log(eng.test($(this).val()))
+                if(!eng.test($(this).val()))
+                    $(this).next("span").css("display","inline").delay(800).fadeOut(200)
+
+            })
+            $("button").on("click",function () {
+                let num = $("input#userPrice").val()
+                $("p").text((num * 1500)+'원')
+                return false
+            })
+
+        })
+    </script>
+
+
+</body>
+</html>

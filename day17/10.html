@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>dom</title>
+<style>
+    section{width:500px; margin:25px auto; text-align:center;}
+    div{display:none;}
+</style>
+<script src="./js/jquery.min.js"></script>
+</head>
+<body>
+    <section>
+        <p class="btn">
+        <button id="btn01">이미지 가져오기</button>
+        <button id="btn02">링크 변경하기</button>
+        </p>
+        <p class="box01">
+            <img src="./images (3)/pic7.jpg" alt="sample">
+        </p>
+
+        <p class="box02">
+            <a href="http://www.naver.com">네이버으로 변경하기</a>
+        </p>
+        <div>
+            <img src="./images (3)/pic1.jpg" alt="sample">
+        </div>
+    </section>
+
+        <script>
+            $(function () {
+                $("#btn01").click(()=>{
+                    let imgEle = $("div>img").attr("src")
+                    $("p.box01>img").attr("src", imgEle)
+
+                })
+                $("#btn02").click(()=>{
+                    $(".box02>a").attr("href","https://www.daum.net/").text("다음으로 변경하기")
+
+                })
+            })
+
+
+        </script>
+</body>
+</html>

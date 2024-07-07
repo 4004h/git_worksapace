@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <style>
+
+    </style>
+    <script>
+        let cunt = 1
+        $(function () {
+            $("#b01").click(()=>{
+                alert("버튼1")
+            })
+            $("#b02").on(" mouseover mouseout mouseup mousedown",(e)=>{
+                console.log(e.target)
+                if(e.type === 'click')
+                    alert("버튼2")
+                else if(e.type === 'mouseover')
+                    $(e.target).css('background-color', 'red')
+                else if(e.type === 'mouseout')
+                    $(e.target).css('background-color', 'yellow')
+                else if(e.type === 'mouseup')
+                    $(e.target).css('background-color', 'green')
+                else if(e.type === 'mousedown')
+                    $(e.target).css('background-color', 'pink')
+
+            })
+            $("#b03").one("click",()=>{
+                alert("버튼3")
+            })
+        })
+
+    </script>
+
+</head>
+<body>
+    <button id="b01"> 버튼 </button>
+    <button id="b02"> 버튼 </button>
+    <button id="b03"> 버튼 </button>
+
+
+
+</body>
+</html>

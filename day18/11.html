@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            display: block;
+        }
+        ul
+        {
+            list-style: none;
+        }
+        img {
+        vertical-align: bottom;
+        /*   vertical-align: top; */
+        }
+
+        #wrap
+        {
+            width: 800px;
+            margin: 0 auto;
+        }
+        #bigimg
+        {
+            width: 100%;
+        }
+        #bigimg img
+        {
+            width: 100%;
+        }
+
+
+
+
+        #all
+        {
+            width: 80%;
+            margin: 10px auto;
+            position: relative;
+        }
+        #prev
+        {
+            position: absolute;
+            left: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        #next
+        {
+            position: absolute;
+            right: -12px;
+            top: 50%;
+            transform: translate(0%,-50%);
+        }
+        #next img,#prev img
+        {
+            width: 120%;
+        }
+
+        #show{
+            width: 100%;
+            overflow: hidden;
+        }
+
+        #show ul
+        {
+            margin: 0 auto;
+            display: flex;
+            background-color: black;
+            width: 200%;
+        }
+        #show ul li
+        {
+            width: calc(100% / 3 - 10px);
+            padding: 5px;
+        }
+        #show img
+        {
+            width: 100%;
+        }
+        
+    </style>
+
+</head>
+<body>
+
+    <div id="wrap">
+        <div id="bigimg">
+            <img src="./04/pic/flw_01.jpg" alt="">
+        </div>
+        <div id="all">
+            <p id="next">
+                <img src="./04/pic/next.png" alt="">
+            </p>
+            <p id="prev">
+                <img src="./04/pic/prev.png" alt="">
+            </p>
+            <div id="show">
+                <ul>
+                    <li><a href="./04/pic/flw_01.jpg">
+                        <img src="./04/pic/flw_01.jpg" alt="">
+                    </a></li>
+                    <li><a href="./04/pic/flw_02.jpg">
+                        <img src="./04/pic/flw_02.jpg" alt="">
+                    </a></li>
+                    <li><a href="./04/pic/flw_03.jpg">
+                        <img src="./04/pic/flw_03.jpg" alt="">
+                    </a></li>
+                    <li><a href="./04/pic/flw_04.jpg">
+                        <img src="./04/pic/flw_04.jpg" alt="">
+                    </a></li>
+                    <li><a href="./04/pic/flw_05.jpg">
+                        <img src="./04/pic/flw_05.jpg" alt="">
+                    </a></li>
+                    <li><a href="./04/pic/flw_06.jpg">
+                        <img src="./04/pic/flw_06.jpg" alt="">
+                    </a></li>
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        
+
+        $(()=>{
+            $("#show a").click(function(e){
+                console.log(typeof this)
+                $("#bigimg>img").attr("src", $(e.target).attr("src"))
+                return false;
+            })
+
+            $("#next").click(()=>{
+                console.log(typeof this)
+                $("#show ul li:first").appendTo($("#show ul"))
+
+            })
+            $("#prev").click(()=>{
+                $("#show ul li:last").prependTo($("#show ul"))
+            })
+
+
+        })
+    </script>
+
+
+</body>
+</html>

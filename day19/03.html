@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul
+        {
+            list-style: none;
+            display: flex;
+        }
+        ul li
+        {
+            float: left;
+        }
+        img {
+        vertical-align: bottom;
+        /*   vertical-align: top; */
+        }
+    </style>
+    <script>
+        $(function () {
+            $("#flower").click(function () {
+                let width = $(this).width()
+                $("div>ul").animate({marginLeft:'-='+width},300,'swing')
+            })
+
+            $("#building").click(function () {
+                let width = $(this).width()
+                $("div>ul").animate({marginLeft:'+='+width},300,'swing')
+            })
+
+        })
+
+
+    </script>
+
+</head>
+<body>
+
+    <div>
+        <ul>
+            <li id="flower"><img src="./05/img/flower.jpg" alt=""></li>
+            <li id="building"><img src="./05/img/building.jpg" alt=""></li>
+        </ul>
+    </div>
+
+
+    
+</body>
+</html>

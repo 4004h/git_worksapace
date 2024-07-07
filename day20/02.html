@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Form Selectors</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+
+</head>
+<body>
+
+    <input type="text" name="" id="">
+    <p></p>
+    <script>
+
+        $(function () {
+            $(":input").on("change",function (e) {
+                let txt = $(this).val()
+                if(isNumeric(txt))
+                {
+                    console.log(txt)
+                    $("body").append("<p>"+ txt +"</p>")
+                }
+                else{
+                    console.log(txt,"형식에 맞지안음")
+                }
+                $("p").text(txt)
+            })
+        })
+
+        function isNumeric(input) { // 정규 표현식을 사용하여 숫자만 포함되어 있는지 확인
+            const regex = /^[0-9]+$/; 
+            return regex.test(input); 
+        }
+        function isValidEmail(input) {
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return regex.test(input); 
+        }
+    </script>
+
+
+
+
+
+
+
+
+</body>
+</html>

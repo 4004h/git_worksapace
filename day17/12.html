@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery.min.js"></script>
+    <style>
+        section{width:500px; margin:25px auto; text-align:center;border: 1px solid black;}
+        section>p{
+            width: 100%;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        section>div{
+            overflow: hidden;
+        }
+        section>div>div{
+            float: left;
+            width: 30%;
+            border:1px solid red;
+            margin: 0 3px;
+        }
+        .box01{
+            background-color: yellowgreen;
+            border: 1px solid blue;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <section>
+        <p>
+            <button id="btn01">배경스타일</button>
+            <button id="btn02">외각선스타일</button>
+        </p>
+        <div>
+            <div class="box01">
+                <p>
+                    <img src="./images (3)/pic2.jpg" alt="">
+                </p>
+            </div>
+            <div class="box02">
+                <p>
+                    <img src="./images (3)/pic3.jpg" alt="">
+                </p>
+            </div>
+            <div class="box03">
+                <p>
+                    <img src="./images (3)/pic4.jpg" alt="">
+                </p>
+            </div>
+        </div>
+    </section>    
+
+    <script>
+        $(function () {
+            $("#btn01").click(()=>{
+                let Bstyle = $(".box01").css("background")
+                $(".box02").css('background',Bstyle)
+
+            })
+            $("#btn02").click(()=>{
+                let Bstyle = $(".box01").css("border")
+                $(".box03").css('border',Bstyle)
+
+            })
+        })
+    </script>
+
+
+
+</body>
+</html>

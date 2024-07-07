@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <style>
+        body{
+            margin: 0;
+            width: 1000px;
+
+        }
+        a{
+
+            text-decoration: none;
+            color: #fc6;
+            display: block;
+        }
+        #top
+        {
+            background-color: gray;
+            position: fixed;
+            right: 50px;
+            bottom: 100px;
+        }
+        #tt
+        {
+            position: fixed;
+            left: 450px;
+            top: 0px;
+            z-index: 100;
+            background-color: #f39;
+            padding: 5px 10px;
+            font-size: 32px;
+            font-weight: 800;
+        }
+        #wrap
+        {
+            width: 400px;
+            background-color: dimgray;
+            color: white;
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div id="tt">
+        tt
+    </div>
+    <div id="wrap">
+        123
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde iste aut consequuntur nobis officia, et reiciendis praesentium sapiente exercitationem nostrum. Velit blanditiis quo impedit possimus deleniti cupiditate magnam, ea saepe?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde iste aut consequuntur nobis officia, et reiciendis praesentium sapiente exercitationem nostrum. Velit blanditiis quo impedit possimus deleniti cupiditate magnam, ea saepe?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde iste aut consequuntur nobis officia, et reiciendis praesentium sapiente exercitationem nostrum. Velit blanditiis quo impedit possimus deleniti cupiditate magnam, ea saepe?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde iste aut consequuntur nobis officia, et reiciendis praesentium sapiente exercitationem nostrum. Velit blanditiis quo impedit possimus deleniti cupiditate magnam, ea saepe?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde iste aut consequuntur nobis officia, et reiciendis praesentium sapiente exercitationem nostrum. Velit blanditiis quo impedit possimus deleniti cupiditate magnam, ea saepe?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde iste aut consequuntur nobis officia, et reiciendis praesentium sapiente exercitationem nostrum. Velit blanditiis quo impedit possimus deleniti cupiditate magnam, ea saepe?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde iste aut consequuntur nobis officia, et reiciendis praesentium sapiente exercitationem nostrum. Velit blanditiis quo impedit possimus deleniti cupiditate magnam, ea saepe?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde iste aut consequuntur nobis officia, et reiciendis praesentium sapiente exercitationem nostrum. Velit blanditiis quo impedit possimus deleniti cupiditate magnam, ea saepe?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde iste aut consequuntur nobis officia, et reiciendis praesentium sapiente exercitationem nostrum. Velit blanditiis quo impedit possimus deleniti cupiditate magnam, ea saepe?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde iste aut consequuntur nobis officia, et reiciendis praesentium sapiente exercitationem nostrum. Velit blanditiis quo impedit possimus deleniti cupiditate magnam, ea saepe?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde iste aut consequuntur nobis officia, et reiciendis praesentium sapiente exercitationem nostrum. Velit blanditiis quo impedit possimus deleniti cupiditate magnam, ea saepe?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde iste aut consequuntur nobis officia, et reiciendis praesentium sapiente exercitationem nostrum. Velit blanditiis quo impedit possimus deleniti cupiditate magnam, ea saepe?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde iste aut consequuntur nobis officia, et reiciendis praesentium sapiente exercitationem nostrum. Velit blanditiis quo impedit possimus deleniti cupiditate magnam, ea saepe?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde iste aut consequuntur nobis officia, et reiciendis praesentium sapiente exercitationem nostrum. Velit blanditiis quo impedit possimus deleniti cupiditate magnam, ea saepe?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde iste aut consequuntur nobis officia, et reiciendis praesentium sapiente exercitationem nostrum. Velit blanditiis quo impedit possimus deleniti cupiditate magnam, ea saepe?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde iste aut consequuntur nobis officia, et reiciendis praesentium sapiente exercitationem nostrum. Velit blanditiis quo impedit possimus deleniti cupiditate magnam, ea saepe?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde iste aut consequuntur nobis officia, et reiciendis praesentium sapiente exercitationem nostrum. Velit blanditiis quo impedit possimus deleniti cupiditate magnam, ea saepe?
+    </div>    
+    <div id="top">
+        <a href="#">top</a>
+    </div>
+
+    <script>
+        $(()=>{
+            $(window).on('scroll',()=>{
+                let posY = Math.floor($("html, body").scrollTop())
+                let posX = Math.floor($("html, body").scrollLeft())
+                $("#tt").text(posY+" : "+posX)
+            })
+        })
+    </script>
+
+</body>
+</html>

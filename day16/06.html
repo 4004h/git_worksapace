@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            list-style: none;
+            display: none;
+            margin-left: 20px;
+        }
+    </style>
+
+    <script>
+        window.onload = ()=>{
+            const title_1 = document.querySelector("#title-1")
+            const list_1 = document.querySelector("#list-1")
+            const title_2 = document.querySelector("#title-2")
+            const list_2 = document.querySelector("#list-2")
+            title_1.addEventListener("mouseover",()=>{
+                list_1.style.display = "block"
+            })
+            title_1.addEventListener("mouseout",()=>{
+                list_1.style.display = "none"
+            })
+            
+            title_2.addEventListener("mouseover",()=>{
+                list_2.style.display = "block"
+            })
+            title_2.addEventListener("mouseout",()=>{
+                list_2.style.display = "none"
+            })
+        }
+
+    </script>
+    
+</head>
+<body>
+
+    <h2 id="title-1">제목-1</h2>
+    <ul id="list-1">
+        <li>리스트1-1</li>
+        <li>리스트1-2</li>
+        <li>리스트1-3</li>
+        <li>리스트1-4</li>
+        <li>리스트1-5</li>
+    </ul>
+
+    <h2 id="title-2">제목-2</h2>
+    <ul id="list-2">
+        <li>리스트2-1</li>
+        <li>리스트2-2</li>
+        <li>리스트2-3</li>
+        <li>리스트2-4</li>
+        <li>리스트2-5</li>
+    </ul>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <style>
+        a{
+            cursor: pointer;
+        }
+        a:hover{
+            background-color: aqua;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <button>요소추가</button>
+    <ul id="linkB">
+        <li><a data="./04/img/flower.jpg">꽃</a></li>
+        <li><a data="./04/img/sea.jpg">바다</a></li>
+        <li><a data="./04/img/Jellyfish.jpg">해파리</a></li>
+    </ul>
+    <p><img src="./04/img/flower.jpg" alt="꽃"></p>
+
+    <script>
+        $(function () {
+            // $("#linkB>li>a").on("click", (e)=>{
+            //     let data = $(e.target).attr("data")
+            //     console.log(data)
+            //     $("p>img").attr("src", data)
+            // }) 
+            // 새거는 적용안됨
+
+            $("body").on("click", "#linkB>li>a",(e)=>{
+                let data = $(e.target).attr("data")
+                $("p>img").attr("src", data)
+            })
+
+            $("button").on("click",(e)=>{
+                $("ul").append('<li><a data="./04/img/building.jpg">빌딩</a></li>')
+                // .on("click", (e)=>{
+                //     let data = $(e.target).attr("data")
+                //     console.log(data)
+                //     $("p>img").attr("src", data)
+                // }) 
+                // 근대 애초에 만들때부터 이벤트를 넣으면 되잖아;;
+            })
+        })
+    </script>
+
+
+</body>
+</html>

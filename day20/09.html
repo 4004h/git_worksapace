@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Form Selectors</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+<style>
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    a{
+        color: black;
+        display: block;
+        text-decoration: none;
+    }
+    ul{
+        list-style: none;
+    }
+    img{
+        vertical-align: bottom;
+        /*   vertical-align: top; */
+    }
+
+    #con{
+        width: 960px;
+        margin: 100px auto;
+        border: 1px solid black;
+        overflow: hidden;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    ul
+    {
+        width: 320px;
+        float: left;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: black;
+        padding: 10px;
+    }
+    ul>li
+    {
+        margin: 5px;
+    }
+    ul>li img
+    {
+        width: 140px;
+    }
+
+
+    div#main
+    {
+        float: right;
+        width: 520px;
+        /* border: 1px solid black; */
+        
+    }
+    div#main>img
+    {
+        width: 520px;
+        
+    }
+
+</style>
+
+</head>
+<body>
+
+    <div id="con">
+        <ul>
+            <li><a href="#"><img src="./imgs/img_01.jpg" alt=""></a></li>
+            <li><a href="#"><img src="./imgs/img_02.jpg" alt=""></a></li>
+            <li><a href="#"><img src="./imgs/img_03.jpg" alt=""></a></li>
+            <li><a href="#"><img src="./imgs/img_04.jpg" alt=""></a></li>
+            <li><a href="#"><img src="./imgs/img_05.jpg" alt=""></a></li>
+            <li><a href="#"><img src="./imgs/img_06.jpg" alt=""></a></li>
+        </ul>
+        <div id="main">
+            <img src="./imgs/img_01.jpg" alt="">
+        </div>
+    </div>
+
+
+    <script>
+        $(function () {
+            $("ul>li>a").click(function () {
+                let url = $(this).children().attr("src")
+                $("#main>img:not(:animated)").fadeOut(200,function () {
+                    $(this).attr("src",url)
+                }).fadeIn(200)
+            })
+        })
+
+
+    </script>
+
+</body>
+</html>

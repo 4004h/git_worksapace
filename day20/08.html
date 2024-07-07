@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Form Selectors</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+<style>
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    a{
+        color: black;
+        display: block;
+        text-decoration: none;
+    }
+    ul{
+        list-style: none;
+    }
+
+    section{
+        width: 500px;
+        margin: 20px auto;
+        padding: 30px;
+        border: 1px solid black;
+        position: relative;
+    }
+    img{
+        vertical-align: bottom;
+        /*   vertical-align: top; */
+    }
+    h1
+    {
+        font: bold;
+        text-align: center;
+        margin-bottom: 25px;
+        color: #63c;
+    }
+    .slide
+    {
+        display: flex;
+    }
+    p
+    {
+        position: absolute;
+        top: 220px;
+    }
+    #prev
+    {
+        left: -11px;
+    }
+    #next
+    {
+        right: -11px;
+    }
+
+    #view{
+        width: 402px;
+        margin: 0 auto;
+        border: 1px solid black;
+        overflow: hidden;
+    }
+    .slide
+    {
+        width: 2000px;
+        margin-left: -400px;
+    }
+</style>
+
+</head>
+<body>
+
+    <section>
+        <h1>slide gallery</h1>
+
+        <p id="prev"><img src="./imgs/prev.png" alt=""></p>
+        <p id="next"><img src="./imgs/next.png" alt=""></p>
+        <div id="view">
+            <ul class="slide">
+                <li><a href="#"><img src="./imgs/pic01.jpg" alt="화보1"></a></li>
+                <li><a href="#"><img src="./imgs/pic02.jpg" alt="화보2"></a></li>
+                <li><a href="#"><img src="./imgs/pic03.jpg" alt="화보3"></a></li>
+                <li><a href="#"><img src="./imgs/pic04.jpg" alt="화보4"></a></li>
+                <li><a href="#"><img src="./imgs/pic05.jpg" alt="화보5"></a></li>
+            </ul>
+        </div>
+
+    </section>
+
+
+    <script>
+        $(function () {
+
+
+            $("#prev").click(function () {
+                prev()
+            })
+            $("#next").click(function () {
+                next()
+            })
+            setInterval(() => {
+                next()
+            }, 3000);
+
+            function prev() {
+                $(".slide:not(:animated)").animate({marginLeft : '-=400px'}, 300, 'swing', function () {
+                    $(".slide li:first").appendTo(".slide")
+                    $(".slide").css({marginLeft : '-400px'})
+                })
+            }
+
+            function next() {
+                $(".slide:not(:animated)").animate({marginLeft : '+=400px'}, 300, 'swing', function () {
+                    $(".slide li:last").prependTo(".slide")
+                    $(".slide").css({marginLeft : '-400px'})
+                })
+            }
+
+        })
+    </script>
+
+</body>
+</html>

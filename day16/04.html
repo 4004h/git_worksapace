@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin:0; padding:0;}
+        img {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="conten"></div>
+
+    <script>
+        const conten = document.querySelector('.conten')
+        for (let index = 1; index <= 6; index++) {
+            let img = document.createElement('img')
+            img.setAttribute("src",`./images (2)/color_${index}.png`)
+            conten.appendChild(img)
+        }
+    </script>
+    
+    
+</body>
+</html>

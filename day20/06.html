@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Form Selectors</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+<style>
+
+</style>
+
+</head>
+<body>
+
+    <h1>jquery ajax</h1>
+    <p>
+        <button id="b1">Ajax</button>
+        <button id="b2">get</button>
+        <button id="b3">post</button>
+        <button id="b4">Ajax</button>
+    </p>
+    <p id="main"></p>
+
+    <script>
+
+        function func1(data){
+            $('#main').append(data);
+        }
+        function func2(xhr, status, strErr){
+            $('#main').append("error =>"+strErr);
+        }
+        function func3(xhr, status){
+            $('#main').append("<p>종료되었습니다.</p>");
+        }
+
+        function getData() {
+            $.ajax({
+                url : "./hello.txts",
+                type : "GET",
+                dataType : "text",
+                success : func1,
+                error : func2,
+                complete : func3
+            })
+        }
+
+        $(function () {
+            $("#b1").click(function () {
+                $.ajax({
+                    url : "./hello.txts",
+                    type : "GET",
+                    dataType : "text",
+                    success : func1,
+                    error : func2,
+                    complete : func3
+                })
+                
+            })
+            $("#b2").click(function () {
+                $.get("./hello.txts",func1)
+                getData()
+                
+            })
+            $("#b3").click(function () {
+                $.post("./test/testdata.json", {txt:"전송"},function (params1, params2) {
+                    console.log(params1, params2)
+                })
+
+                
+            })
+            $("#b4").click(function () {
+                $('#main').load("./hello.txts", "안녕함", function (params) {
+                    console.log(params)
+                })
+            })
+
+            //예제
+            $('#btn04').on('click',function(){
+                $("#main").load('hello.txt', function(response, status, xhr){
+                    if(status=="success"){
+                        func1(response);
+                    } else {
+                        func2(xhr, status, xhr.statusText);
+                    }
+                })
+            });
+        })
+
+    </script>
+
+
+</body>
+</html>

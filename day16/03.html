@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin:0; padding:0;}
+        img{max-width:100%;}
+        .picBox {
+            margin: 2em auto;
+            width: 500px;
+            
+        }
+        .picBox figcaption {
+            margin-top: 1em;
+            padding-right: 30%;
+            padding-left: 1em;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <figure class="picBox">
+        <img src="./images (2)/earth.jpg" alt="우주에서 본 지구 모습">
+    </figure>
+
+
+
+    <script>
+        //alt값 읽고 하단 제목표시
+        //picBox속 img속 alt 값 구하기
+
+        const picBox = document.querySelector(".picBox")
+        const picImg = document.querySelector(".picBox>img")
+        const pEle = document.createElement("p")
+        pEle.textContent = picImg.alt//.getAttribute("alt")
+        pEle.setAttribute('style','text-align: center;')
+        picBox.appendChild(pEle)
+        
+    </script>
+    
+    
+</body>
+</html>

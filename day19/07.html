@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <style>
+        .btn{
+            background-color: red;
+            color: white;
+            position: fixed;
+            top: 10px;
+            padding: 5px;
+        }
+        #btn-scroll-top
+        {
+            left: 50px;
+        }
+        #btn-scroll-left
+        {
+            left: 150px;
+        }
+        #btn-ani-top
+        {
+            left: 250px;
+        }
+        #btn-ani-left
+        {
+            left: 350px;
+        }
+        #top
+        {
+            position: fixed;
+            right: 50px;
+            bottom: 100px;
+            background-color: black;
+            border-radius: 20%;
+        }
+        a{
+            text-decoration: none;
+            display: block;
+            padding: 5px;
+            color: white;
+        }
+        #wrap
+        {
+            width: 800px;
+            background-color: darkgrey;
+            font-size: 2em;
+        }
+
+
+
+
+    </style>
+    <script>
+        $(function () {
+            $("#btn-scroll-top").click(function () {
+                $("html,body").scrollTop(100)
+
+            })
+            $("#btn-scroll-left").click(function () {
+                $("html,body").scrollLeft(20)
+                
+            })
+            $("#btn-ani-top").click(function () {
+                $("html,body").animate({scrollTop : 800,scrollLeft : 800},800,"swing")
+                
+            })
+            $("#btn-ani-left").click(function () {
+                $("html,body").animate({scrollTop : 0,scrollLeft : 0},800,"swing")
+                
+            })
+            
+        })
+
+
+    </script>
+
+</head>
+<body>
+    <p>
+        <div class="btn" id="btn-scroll-top">scrolltop</div>
+        <div class="btn" id="btn-scroll-left">scrollleft</div>
+        <div class="btn" id="btn-ani-top">anitop</div>
+        <div class="btn" id="btn-ani-left">anileft</div>
+    </p>
+    <div id="wrap">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. At, velit incidunt. Aut, minus accusantium alias ut in odio dicta totam sed libero velit praesentium! Accusamus expedita sed veritatis? Neque, laudantium.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. At, velit incidunt. Aut, minus accusantium alias ut in odio dicta totam sed libero velit praesentium! Accusamus expedita sed veritatis? Neque, laudantium.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. At, velit incidunt. Aut, minus accusantium alias ut in odio dicta totam sed libero velit praesentium! Accusamus expedita sed veritatis? Neque, laudantium.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. At, velit incidunt. Aut, minus accusantium alias ut in odio dicta totam sed libero velit praesentium! Accusamus expedita sed veritatis? Neque, laudantium.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. At, velit incidunt. Aut, minus accusantium alias ut in odio dicta totam sed libero velit praesentium! Accusamus expedita sed veritatis? Neque, laudantium.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. At, velit incidunt. Aut, minus accusantium alias ut in odio dicta totam sed libero velit praesentium! Accusamus expedita sed veritatis? Neque, laudantium.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. At, velit incidunt. Aut, minus accusantium alias ut in odio dicta totam sed libero velit praesentium! Accusamus expedita sed veritatis? Neque, laudantium.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. At, velit incidunt. Aut, minus accusantium alias ut in odio dicta totam sed libero velit praesentium! Accusamus expedita sed veritatis? Neque, laudantium.
+
+    </div>
+
+    <div id="top">
+        <a href="#">top</a>
+    </div>
+
+
+
+
+    
+
+</body>
+</html>

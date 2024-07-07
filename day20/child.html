@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Form Selectors</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+<style>
+
+</style>
+
+</head>
+<body>
+
+    <h1>아들창</h1>
+
+    <button onclick="sendParent()">부모창전달</button>
+
+    <script>
+
+        
+        function sendParent(params) {
+            window.parent['show'](params)
+            //['']<=함수명
+        }
+
+        function getParames() {
+            const params = new URLSearchParams(window.location.search)
+            return {
+                data1 : parseInt(params.get("data1")),
+                data2 : parseInt(params.get("data2")),
+                callback : params.get("callback")
+            }
+        }
+        const params = getParames()
+        document.write(params.data1+" ~ "+params.data2+" => "+params.callback)
+        sumAsnc(params.data1,params.data2)
+
+        function sumAsnc(params1, params2) {
+            let result = 0
+            for (let index = params1; index < params2; index++) {
+                result += index
+            }
+            sendParent(params1+' ~ ' +params2 +' => '+result);
+        }
+    </script>
+
+</body>
+</html>

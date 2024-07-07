@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <style>
+
+    </style>
+    <script>
+        let cunt = 1
+        $(function () {
+            $("#b01").click(()=>{
+                $(".conten1").append("<p>반갑습니다</p>")
+            })
+            $("#b02").click(()=>{
+                $(".conten2").prepend("<p>오랜만입니다</p>")
+            })
+            $("#b03").click(()=>{
+                run()
+            })
+            setInterval(() => {
+                run()
+            }, 15);
+        })
+
+        function run() {
+            cunt < 15 ? cunt++ : cunt = 1
+            $("#imgs>img").attr("src",`./img/run/${cunt}.png`)
+        }
+    </script>
+
+</head>
+<body>
+    <button id="b01"> 버튼 </button>
+    <div class="conten1">
+        <p>안녕하세요</p>
+    </div>
+    <button id="b02"> html </button>
+    <div class="conten2">
+        <p>안녕하세요</p>
+    </div>
+
+    <section>
+        <p>
+            <button id="b03">이미지 가저오기</button>
+        </p>
+        <p id="imgs">
+            <img src="./img/run/1.png" alt="">
+        </p>
+    </section>
+
+</body>
+</html>

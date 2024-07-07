@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <style>
+        .txt
+        {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            margin-left: 0px;
+            margin-top: 0px;
+            position: relative;
+        }
+
+    </style>
+    <script>
+        $(function () {
+            $(".txt").animate({"background-color" : "#111"},500, ()=>{console.log("a")})
+            
+            $('#aniBtn').on("click",function () {
+                $(".txt").animate({marginLeft:"200px"},500)
+                       
+                        .animate({marginTop:"200px"},500)
+                        .delay(500)
+                        .animate({marginLeft:"000px"},500)
+                        .animate({marginTop:"000px"},500)
+            })
+        })
+
+    </script>
+
+</head>
+<body>
+
+    <button id="aniBtn">애니메이션 시작</button>
+
+    <div class="txt">
+
+    </div>
+    
+</body>
+</html>

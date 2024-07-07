@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            width: 75px;
+            height: 75px;
+            margin: 0px;
+            font: bold 25px/50px Arial;
+            background-color: red;
+            color: white;
+        }
+        .box{
+            position: absolute;
+            left: 0px;
+            top: 200px;
+            width: 50px;
+            height: 50px;
+            background-color: #06f;
+        }
+        .buts
+        {
+            margin: 0 auto;
+            position: relative;
+            width: calc(75px * 3 + 10px);
+            height: calc(75px * 3 + 10px);
+        }
+        #left
+        {
+            position: absolute;
+            left: 0;
+            top: 80px;
+        }
+        #stop
+        {
+            position: absolute;
+            left: 80px;
+            top: 80px;
+        }
+        #right
+        {
+            position: absolute;
+            left: 160px;
+            top: 80px;
+        }
+        #up
+        {
+            position: absolute;
+            left: 80px;
+            top: 0px;
+        }
+        #down
+        {
+            position: absolute;
+            left: 80px;
+            top: 160px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="buts">
+        <button type="button" id="left">left</button>
+        <button type="button" id="right">right</button>
+        <button type="button" id="up">up</button>
+        <button type="button" id="down">down</button>
+        <button type="button" id="stop">stop</button>
+    </div>
+
+    
+    <div class="box"></div>
+
+    <script>
+        const btnStop = document.querySelector("#stop")
+        const btnU = document.querySelector("#up")
+        const btnD = document.querySelector("#down")
+        const btnR = document.querySelector("#right")
+        const btnL = document.querySelector("#left")
+        let boxEle = document.querySelector(".box")
+        let movePx = 5
+
+        let up = ()=>{
+            // stop()
+            playUD(-movePx)
+        }
+        let dn = ()=>{
+            // stop()
+            playUD(movePx)
+        }
+        let lf = ()=>{
+            // stop()
+            playLR(-movePx)
+        }
+        let ri = ()=>{
+            // stop()
+            playLR(movePx)
+        }
+        btnU.addEventListener("click",up)
+        btnD.addEventListener("click",dn)
+        btnR.addEventListener("click",ri)
+        btnL.addEventListener("click",lf)
+        btnStop.addEventListener("click",stop)
+
+        document.addEventListener('keydown',(e)=>{
+            console.log(e.code)
+            switch (e.code) {
+                case "KeyW":
+                    moveUD(-movePx)
+                    break;
+
+                case "KeyS":
+                    moveUD(movePx)
+                    break;
+
+                case "KeyA":
+                    moveLR(-movePx)
+                    break;
+
+                case "KeyD":
+                    moveLR(movePx)
+                    break;
+            }
+        })
+
+
+        let boxUp = 200
+        function moveUD(e) {
+            boxUp+=e
+            boxEle.style.top = boxUp+"px"
+        }
+
+        let boxLeft = 0
+        function moveLR(e) {
+            boxLeft+=e
+            boxEle.style.left = boxLeft+"px"
+        }
+
+        let mvTimer
+        function playUD(e) {
+            mvTimer = setInterval(() => {
+                moveUD(e)
+            }, 10);
+        }
+        function playLR(e) {
+            mvTimer = setInterval(() => {
+                moveLR(e)
+            }, 10);
+        }
+        function stop() {
+            if(mvTimer)
+                clearInterval(mvTimer)
+        }
+        // function play() {
+        //     mvTimer = setInterval(() => {
+        //         moveBox()
+        //     }, 10);
+        // }
+
+
+
+    </script>
+    
+</body>
+</html>

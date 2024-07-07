@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul
+        {
+            width: 800px;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap
+        }
+        img
+        {
+        vertical-align: bottom;
+        /*   vertical-align: top; */
+        }
+        li{
+            width: calc(25% - 10px);
+            margin: 5px;
+        }
+        li img
+        {
+            width: 100%;
+        }
+        .modal
+        {
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            z-index: 100;
+            background-color: rgba(0, 0, 0,0.5);
+            display: none;
+        }
+        .modal img
+        {
+            position: relative;
+            top: 50%;
+            left: 50%;
+            margin-top: 0px;
+            margin-left: 0px;
+            /* transform: translate(-50%,-50%); */
+        }
+    </style>
+    <script>
+        $(function () {
+            $(".list>li>a>img").click(function () {
+                $(".modal>img").attr("src", $(this).attr("src"))
+                $(".modal").show()//toggle
+
+                //transform: translate(-50%,-50%);
+                let wid =  $(".modal img").width()/2
+                let hei =  $(".modal img").height()/2
+                $(".modal img").css({marginTop : "-"+hei+'px'})
+                $(".modal img").css({marginLeft : "-"+wid+'px'})
+            })
+            $(".modal").click(function () {
+                $(".modal").hide()//toggle
+
+            })
+            
+            $(".modal>img").click(function (e) {
+                e.stopPropagation()
+                return false;
+            })
+        })
+
+    </script>
+
+</head>
+<body>
+    <div class="modal">
+        <img src="./05/img/img_01.jpg" alt="">
+    </div>
+
+    <ul class="list">
+        <li><a href="#"><img src="./05/img/img_01.jpg" alt=""></a></li>
+        <li><a href="#"><img src="./05/img/img_02.jpg" alt=""></a></li>
+        <li><a href="#"><img src="./05/img/img_03.jpg" alt=""></a></li>
+        <li><a href="#"><img src="./05/img/img_04.jpg" alt=""></a></li>
+        <li><a href="#"><img src="./05/img/img_05.jpg" alt=""></a></li>
+        <li><a href="#"><img src="./05/img/img_06.jpg" alt=""></a></li>
+        <li><a href="#"><img src="./05/img/img_07.jpg" alt=""></a></li>
+        <li><a href="#"><img src="./05/img/img_08.jpg" alt=""></a></li>
+    </ul>
+    
+
+</body>
+</html>

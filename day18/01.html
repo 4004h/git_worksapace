@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <style>
+        p{
+            border: 3px solid blue;
+            padding: 10px;
+        }
+    </style>
+    <script>
+        $(function () {
+            $("#b01").click(()=>{
+                $("strong").wrap("<p>")
+            })
+            $("#b02").click(()=>{
+                $("strong").wrapAll("<p>")
+            })
+            $("#b03").click(()=>{
+                $("div").wrapInner("<p>")
+            })
+            $("#b04").click(()=>{
+                $("strong").unwrap()
+            })
+        })
+
+    </script>
+
+</head>
+<body>
+    <p>
+        <button id="b01">버튼1 wrap</button>
+        <button id="b02">버튼2 wrapAll</button>
+        <button id="b03">버튼3 wrapInner</button>
+        <button id="b04">버튼4 unwrap</button>
+    </p>
+    <div>
+        <strong>강한글씨</strong>
+        <strong>강한글씨</strong>
+        <em>em글씨</em>
+        <strong>강한글씨</strong>
+        <strong>강한글씨</strong>
+
+    </div>
+    
+</body>
+</html>
