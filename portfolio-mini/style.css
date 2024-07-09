@@ -1,3 +1,26 @@
+/* 
+    메인 페이지
+    header : fixed
+    title-page : none
+    top : none
+ */
+
+.box
+{
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    top: 100%;
+}
+
+.none
+{
+    display: none;
+}
+
+
 *{
     margin: 0;
     padding: 0;
@@ -17,11 +40,6 @@ img {
     /*   vertical-align: top; */
 }
 
-/* 반응형 개조 */
-nav
-{
-    /* min-width: 1320px; */
-}
 
 .title-page
 {
@@ -37,7 +55,7 @@ nav
 
 nav
 {
-    max-width: 1320px;
+    /* max-width: 1320px; */
     width: 100%;
     margin: 0 auto;
     padding: 0px 12px;
@@ -76,10 +94,11 @@ header
 {
     border-bottom: 1px solid rgba(140, 140, 140, 0.4);
     width: 100%;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    position: fixed;
+    /* left: 50%;
+    transform: translateX(-50%); */
 }
+
 
 
 div.head
@@ -95,7 +114,7 @@ div.head
 
 div.logo
 {
-    margin-right: 140px;
+    margin-right: auto;
 }
 div.logo>a
 {
@@ -121,10 +140,11 @@ div.head-menu
 
 ul.head-main-menu
 {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     margin: 0;
+    padding-left: 1em;
 }
 
 ul.head-main-menu>li
@@ -182,6 +202,24 @@ ul.head-sub-menu>li>a
     font-size: 0.87rem;
 }
 
+ul.head-sub-menu>li:has(ul.head-sub-menu-sub)>a::after
+{
+    content: "\F231";
+    font-family: bootstrap-icons !important;
+    display: inline-block;
+    font-size: 0.5rem;
+    font-family: bootstrap-icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    /* padding-left: 0.5rem; */
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    float: right;
+}
+
+
 ul.head-sub-menu-sub
 {
     position: absolute;
@@ -217,8 +255,9 @@ ul.head-sub-menu
 
 ul.icon
 {
-    display: flex;
+    display: none;
     padding-left: 24px;
+    margin: 0;
 }
 
 ul.icon li:first-child a 
@@ -236,4 +275,51 @@ ul.icon li a img:last-child
     display: none;
 }
 
+
+
+/* 반응형 개조 */
+
+@media (min-width: 576px)
+{
+
+    nav
+    {
+        max-width: 540px;
+    }
+}
+@media (min-width: 768px){
+    ul.head-main-menu
+    {
+        display: flex;
+    }
+    nav
+    {
+        max-width: 720px;
+    }
+
+}
+
+@media (min-width: 992px){
+    nav
+    {
+        max-width: 960px;
+    }
+    ul.icon
+    {
+        display: flex;
+    }
+}
+@media (min-width: 1200px){
+    nav
+    {
+        max-width: 1140px;
+    }
+
+}
+@media (min-width: 1400px){
+    nav
+    {
+        max-width: 1320px;
+    }
+}
 
